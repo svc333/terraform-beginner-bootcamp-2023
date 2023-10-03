@@ -61,3 +61,42 @@ https://en.wikipedia.org/wiki/Chmod
 
 ### Gitpod documentation (init doesnt run on restart)
 https://www.gitpod.io/docs/configure/workspaces/tasks
+
+### Working with Env Vars
+
+We can list out all Environment Variables using `env` command
+
+Also filter specific Env Vars using grep eg. `env | grep AWS_`
+
+#### Setting and Unsetting env vars
+
+in terminal `export Hello='world` then `unset Hello`
+
+Temp Vars
+
+```
+Hello=`world ./bin/print_message`
+```
+
+Within bash without export
+
+```
+HELLO='world'
+
+echo $HELLO
+```
+
+####printing Vars
+
+print env var using `echo $HELLO`
+
+#### Scoping env vars
+
+when opening new bash terminals, it per window.  If you want peristent env vars across all terminal windows.   Set env vars in bash profile.
+
+
+#### Persisting env vars in gitpod
+
+by storing them in gitpod secret storage
+
+
