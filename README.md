@@ -100,3 +100,28 @@ when opening new bash terminals, it per window.  If you want peristent env vars 
 by storing them in gitpod secret storage
 
 
+### AWS CLI installation
+[AWS CLI installed for new project via the bash script](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+`./bin/install_aws_cli`
+
+
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Check for AWS creds using ``` aws sts get-caller-identity```
+
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+```
+gitpod /workspace/terraform-beginner-bootcamp-2023 (8-refactor-aws-cli-script) $ aws sts get-caller-identity
+{
+    "UserId": "AFAKENUMBERHERE",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::123456789012:user/terraform-beginner-bootcamp"
+}
+```
+Refactor to use IAM Role instead of IAM user.
