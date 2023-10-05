@@ -169,3 +169,7 @@ The lock files shoul be commited to Github
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers
+
+#### Terraform Destroy
+`terraform destroy`
+
