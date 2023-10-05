@@ -125,3 +125,47 @@ gitpod /workspace/terraform-beginner-bootcamp-2023 (8-refactor-aws-cli-script) $
 }
 ```
 Refactor to use IAM Role instead of IAM user.
+
+## Terraform Basics
+
+### Terraform Registry
+Terraform sources their providers and modules from the terraform registry which is located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs
+- **Modules** are a way to make large amounts of code modular, portable and sharable
+
+## Terraform Console
+
+List of all terraform commands by typing `terraform`
+
+#### Terraform Init
+at the start of a new project, run `terraform init` to download the binaies for the terraform providers that will be used
+
+#### Terraform Plan 
+
+Generates changeset.  Output changeset ie. "plan" to be passed to apply, but often you can just ignore outputting
+
+#### Terraform Apply
+
+`terraform apply`
+
+This runs the changeset to execute
+
+to auto approve use `terraform apply --auto-approve`
+
+
+### Terraform Lock files
+
+`.terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project.
+
+The lock files shoul be commited to Github
+
+### Terraform State Files
+
+`.terraform.tfstate` contains info about the current state.  This files should not be commited to Github.  If you lose this files, you lose knowing the state of your infrastructure
+
+`.terraform.tfstate.backup` is the previous state
+
+### Terraform Directory
+
+`.terraform` directory contains binaries of terraform providers
