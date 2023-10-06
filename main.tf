@@ -33,3 +33,13 @@ resource "aws_s3_bucket" "example" {
     Environment = "test"
   }
 }
+
+terraform {
+  cloud {
+    organization = "scal"
+
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
+}
