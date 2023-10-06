@@ -169,3 +169,31 @@ The lock files shoul be commited to Github
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers
+
+## issues with terraform cloud and gitpod
+
+When attempting to run`terraform login` it will launch a cli that doesnt work.  Had to copy the url that shows up
+
+create the token:
+
+```
+https://app.terraform.io/app/settings/tokens
+```
+
+then create the file manually:
+
+```
+ touch /home/gitpod/.terraform.d/credentials.tfrc.json
+ open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+
+```
+{
+    "credentials": {
+      "app.terraform.io": {
+        "token": "REPLACE_ME"
+      }
+    }
+  }
+  
+```
