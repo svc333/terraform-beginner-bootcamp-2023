@@ -2,10 +2,33 @@
 
 ## Table of Contents
 
-- [Install Terraform](#install-the-terraform-cli)
-- [Sha-Bang Considerations](#sha-bang-considerations)
-- [AWS CLI install](#aws-cli-installation)
-- [Terraform things](#terraform-basics)
+
+- [Terraform Beginner Bootcamp 2023](#terraform-beginner-bootcamp-2023)
+  * [Table of Contents](#table-of-contents)
+  * [Semantic Versioning :mage:](#semantic-versioning--mage-)
+  * [Install the Terraform CLI](#install-the-terraform-cli)
+    + [Considerations with the Terraform CLI changed](#considerations-with-the-terraform-cli-changed)
+    + [While fixing the Terraform deprecation issues created new CLI bash script](#while-fixing-the-terraform-deprecation-issues-created-new-cli-bash-script)
+  * [Sha-bang considerations](#sha-bang-considerations)
+  * [Execution Considerations](#execution-considerations)
+    + [Chmod changes file permissions](#chmod-changes-file-permissions)
+    + [Gitpod documentation (init doesnt run on restart)](#gitpod-documentation--init-doesnt-run-on-restart-)
+    + [Working with Env Vars](#working-with-env-vars)
+      - [Setting and Unsetting env vars](#setting-and-unsetting-env-vars)
+      - [Scoping env vars](#scoping-env-vars)
+      - [Persisting env vars in gitpod](#persisting-env-vars-in-gitpod)
+    + [AWS CLI installation](#aws-cli-installation)
+  * [Terraform Basics](#terraform-basics)
+    + [Terraform Registry](#terraform-registry)
+  * [Terraform Console](#terraform-console)
+      - [Terraform Init](#terraform-init)
+      - [Terraform Plan](#terraform-plan)
+      - [Terraform Apply](#terraform-apply)
+    + [Terraform Lock files](#terraform-lock-files)
+    + [Terraform State Files](#terraform-state-files)
+    + [Terraform Directory](#terraform-directory)
+  * [issues with terraform cloud and gitpod](#issues-with-terraform-cloud-and-gitpod)
+
 
 ## Semantic Versioning :mage:
 
