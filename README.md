@@ -1,5 +1,12 @@
 # Terraform Beginner Bootcamp 2023
 
+## Table of Contents
+
+- [Install Terraform](#install-the-terraform-cli)
+- [Sha-Bang Considerations](#sha-bang-considerations)
+- [AWS CLI install](#aws-cli-installation)
+- [Terraform things](#terraform-basics)
+
 ## Semantic Versioning :mage:
 
 [semver.org](https://semver.org/)
@@ -46,7 +53,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-### Sha-bang considerations
+## Sha-bang considerations
 - tells bash script what program is being used
 - will search user path for portability
 
