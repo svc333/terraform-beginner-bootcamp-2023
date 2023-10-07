@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+
 - [Terraform Beginner Bootcamp 2023](#terraform-beginner-bootcamp-2023)
   * [Table of Contents](#table-of-contents)
   * [Semantic Versioning :mage:](#semantic-versioning--mage-)
@@ -27,6 +28,7 @@
     + [Terraform State Files](#terraform-state-files)
     + [Terraform Directory](#terraform-directory)
   * [issues with terraform cloud and gitpod](#issues-with-terraform-cloud-and-gitpod)
+
 
 ## Semantic Versioning :mage:
 
