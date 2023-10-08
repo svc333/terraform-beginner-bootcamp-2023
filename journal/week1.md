@@ -63,3 +63,37 @@ If someone clickOps in AWS
 
 Terraform Plan will attempt to put the infra back into the expected state to fix drift
 
+## Terraform Modules
+
+### Terraform module structure
+Recommended to place `modules` in a modules directory when locally developing modules
+
+### Passing Input Variables
+Pass input variables to the module
+
+The module has to declare the tf variables it its own variable
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Module Sources
+Using the source we can impirt the module from various places eg:
+- locally
+- Github
+- Terraform Registry
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+}
+```
+
+[Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+
+### Problems that didnt match Create Terrahouse Module video
+- resources werent allowed in main
+- I had to create a resource.tf and move them

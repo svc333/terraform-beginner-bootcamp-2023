@@ -5,6 +5,11 @@ terraform {
       version = "5.19.0"
     }
   }
+# provider "aws" {
+#   # Configuration options - use assume role in future
+# }
+
+
 
 #   cloud {
 #     organization = "scal"
@@ -13,11 +18,4 @@ terraform {
 #       name = "terra-house-1"
 #     }
 #   }
-}
-
-provider "random" {
-  # Configuration options
-}
-provider "aws" {
-  # Configuration options
 }
