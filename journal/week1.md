@@ -44,3 +44,22 @@ use the `-var` flag to set input variable or override a variable in the tfvars f
  ### order of tf variables
 
  - Document this functionality and the precidence
+
+## Dealing with config drift
+
+## lose state file? 
+SOL, tear everything down manually.  Import doesnt work on all resources.
+
+`terraform import aws_s3_bucket.example`
+
+### Fix missing resources with tf import
+[Terraform Import](https://developer.hashicorp.com/terraform/cli/import)
+[AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket.html#import)
+`% terraform import aws_s3_bucket.bucket bucket-name`
+
+### Fix manual config
+
+If someone clickOps in AWS
+
+Terraform Plan will attempt to put the infra back into the expected state to fix drift
+

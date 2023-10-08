@@ -7,3 +7,8 @@ variable "user_uuid" {
     error_message = "User UUID must be in the format 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', where 'x' is a hexadecimal digit."
   }
 }
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
+  type        = string
+  # You can add more validation rules if needed
+}
