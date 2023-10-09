@@ -204,3 +204,15 @@ executes commands running the terraform commands eg. plan, apply
 ### Remote-exec
 
 executes on....   REMOTE targets!
+
+## For Each Expressions
+
+For each allows to enumerate over complex data types
+
+```sh
+[for s in var.list : upper(s)]
+```
+
+This is mostly useful when creating multiples of a cloud resource and to reduce the amount of repetitive terraform code.
+
+[For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
