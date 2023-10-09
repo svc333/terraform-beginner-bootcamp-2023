@@ -143,3 +143,39 @@ resource "aws_s3_object" "index_html" {
   etag = filemd5(var.index_html_filepath)
 }
 ``````
+## Terraform Locals
+
+[Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
+
+### Terraform Data Sources
+
+This allows us to source data from cloud resources without importing them
+```
+data "aws_caller_identity" "current" {}
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
+```
+
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+
+
+## AWS error requiring support
+```
+module.terrahouse_aws.aws_cloudfront_distribution.s3_distribution: Creating...
+╷
+│ Error: creating CloudFront Distribution: AccessDenied: Your account must be verified before you can add new CloudFront resources. To verify your account, please contact AWS Support (https://console.aws.amazon.com/support/home#/) and include this error message.
+│       status code: 403, request id: d01186a3-c2cb-4a78-a6c2-b4bfd8b71e74
+│ 
+│   with module.terrahouse_aws.aws_cloudfront_distribution.s3_distribution,
+│   on modules/terrahouse_aws/resource-cdn.tf line 16, in resource "aws_cloudfront_distribution" "s3_distribution":
+│   16: resource "aws_cloudfront_distribution" "s3_distribution" {
+```
+
+
+## Working with JSON
+
+used to create json policy inline
+
+[jsonencode function](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
