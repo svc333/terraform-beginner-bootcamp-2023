@@ -97,3 +97,45 @@ module "terrahouse_aws" {
 ### Problems that didnt match Create Terrahouse Module video
 - resources werent allowed in main
 - I had to create a resource.tf and move them
+
+## Considerations when using ChatGPT
+
+LLMs may notbe trained on the latest documentation or information about terraform, so it spits out old examples that are depricated.  Often affecting providers
+
+## Working with files in terraform
+
+### Fileexists function
+
+built in tf function to check existance of file
+```
+variable "index_html_filepath" {
+  description = "The file path for index.html"
+  type = string
+
+
+validation {
+  condition = fileexists(var.index_html_filepath)
+  error_message = "the provided path for index.html does not exist."
+}
+}
+
+```
+
+### File md5
+used to show a file updates, so it can be reuploaded
+
+### Path Variable
+In terraform there is a special variable called `path` that allows us to reference local paths:
+- path.module = get the path for the current module 
+- path.root = get the path for the root of the modile
+
+[Special Path Variable](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
+``````
+resource "aws_s3_object" "index_html" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key = "index.html"
+  source = "var.index_html_filepath"
+
+  etag = filemd5(var.index_html_filepath)
+}
+``````

@@ -8,7 +8,13 @@ variable "user_uuid" {
   }
 }
 variable "bucket_name" {
-  description = "The name of the S3 bucket"
   type        = string
-  # You can add more validation rules if needed
+}
+
+variable "index_html_filepath" {
+  type = string
+}
+
+variable "error_html_filepath" {
+  type = string
 }
