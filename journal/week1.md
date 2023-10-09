@@ -1,5 +1,9 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## Fixing Tags
+I didnt mess up my tags
+[How to delete and fix tags](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
+
 ## Root Module Structure
 
 ```
@@ -14,7 +18,7 @@ Root module structure is as follows:
 ```
 [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
-## Terraform and input Vanriables
+## Terraform and input Variables
 ## Terraform Cloud Variables
 
 in terraform you can set 2 variables
